@@ -1,0 +1,93 @@
+package com.example.canine_care.ui
+
+import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
+import com.example.canine_care.R
+import com.example.canine_care.entity.User
+import com.example.canine_care.repository.UserRepository
+import com.google.android.material.textfield.TextInputEditText
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+
+class RegisterActivity : AppCompatActivity() {
+    private lateinit var edtfname: EditText
+    private lateinit var edtlname: EditText
+    private lateinit var edtemail: EditText
+    private lateinit var edtusername: EditText
+    private lateinit var edtpassword: EditText
+    private lateinit var btnRegistration: Button
+    private lateinit var btnLogin: Button
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_register)
+
+        edtfname = findViewById(R.id.edtfname)
+        edtlname = findViewById(R.id.edtlname)
+        edtemail = findViewById(R.id.edtemail)
+        edtusername = findViewById(R.id.edtusername)
+
+        edtpassword = findViewById(R.id.edtpassword)
+        btnRegistration = findViewById(R.id.btnRegistration)
+        btnLogin = findViewById(R.id.btnLogin)
+
+        btnLogin.setOnClickListener {
+            val intent = Intent(this@RegisterActivity, MainActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnRegistration.setOnClickListener {
+            val fname = edtfname.text.toString()
+            val lname = edtlname.text.toString()
+            val email = edtemail.text.toString()
+            val username = edtusername.text.toString()
+            val password = edtpassword.text.toString()
+
+            val intent = Intent(this@RegisterActivity, MainActivity::class.java)
+            startActivity(intent)
+
+            if (password != password) {
+                edtpassword.error = "Password does not match"
+                edtpassword.requestFocus()
+                return@setOnClickListener
+            } else {
+                val user = User(
+                    fname = fname,
+                    lname = lname,
+                    username = username,
+                    email = email,
+                    password = password
+                )
+                CoroutineScope(Dispatchers.IO).launch {
+//                    UserDB.getInstance(this@RegisterActivity).getUserDAO().registerUser(user)
+                    try {
+                        val userRepository = UserRepository()
+                        val response = userRepository.registerUser(user)
+                        if (response.success == true) {
+                            withContext(Dispatchers.Main) {
+                                Toast.makeText(
+                                    this@RegisterActivity,
+                                    "Register SuccessFull", Toast.LENGTH_SHORT
+                                ).show()
+                            }
+                        }
+                    } catch (ex: Exception) {
+                        withContext(Dispatchers.Main) {
+                            Toast.makeText(
+                                this@RegisterActivity,
+                                "Username cannot be duplicate", Toast.LENGTH_SHORT
+                            ).show()
+
+                        }
+                    }
+                }
+                Toast.makeText(this, "User Registered", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+}
