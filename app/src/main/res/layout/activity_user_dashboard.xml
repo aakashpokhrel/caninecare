@@ -59,7 +59,7 @@
                 android:layout_width="120dp"
                 android:layout_height="140dp"
                 app:cardCornerRadius="12dp"
-                android:layout_marginLeft="45dp"
+                android:layout_marginLeft="40dp"
                 app:cardElevation="5dp"
                 app:cardBackgroundColor="@color/white"
                 android:layout_margin="10dp">
@@ -141,7 +141,7 @@
                 android:layout_width="120dp"
                 android:layout_height="140dp"
                 app:cardCornerRadius="12dp"
-                android:layout_marginLeft="45dp"
+                android:layout_marginLeft="40dp"
                 app:cardElevation="5dp"
                 app:cardBackgroundColor="@color/white"
                 android:layout_margin="10dp">
@@ -223,7 +223,7 @@
                 android:layout_width="120dp"
                 android:layout_height="140dp"
                 app:cardCornerRadius="12dp"
-                android:layout_marginLeft="45dp"
+                android:layout_marginLeft="40dp"
                 app:cardElevation="5dp"
                 app:cardBackgroundColor="@color/white"
                 android:layout_margin="10dp">
@@ -296,7 +296,7 @@
                 android:layout_width="120dp"
                 android:layout_height="140dp"
                 app:cardCornerRadius="12dp"
-                android:layout_marginLeft="45dp"
+                android:layout_marginLeft="40dp"
                 app:cardElevation="5dp"
                 app:cardBackgroundColor="@color/white"
                 android:layout_margin="10dp">
@@ -378,7 +378,7 @@
                 android:layout_width="120dp"
                 android:layout_height="140dp"
                 app:cardCornerRadius="12dp"
-                android:layout_marginLeft="45dp"
+                android:layout_marginLeft="40dp"
                 app:cardElevation="5dp"
                 app:cardBackgroundColor="@color/white"
                 android:layout_margin="10dp">
@@ -419,7 +419,7 @@
                     android:layout_width="200dp"
                     android:id="@+id/imlogout"
                     android:layout_height="90dp"
-                    android:src="@drawable/Logout"
+                    android:src="@drawable/log"
                     android:layout_marginTop="18dp"
 
                     android:padding="5dp"

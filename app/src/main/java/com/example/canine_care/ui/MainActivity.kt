@@ -36,8 +36,8 @@ class MainActivity : AppCompatActivity() {
         linearLayout = findViewById(R.id.linearlayout)
 
         btnLogin.setOnClickListener {
-//            val intent = Intent(this@MainActivity, Dashboard::class.java)
-//            startActivity(intent)
+           val intent = Intent(this@MainActivity, User_dashboard::class.java)
+          startActivity(intent)
 
             login()
         }
