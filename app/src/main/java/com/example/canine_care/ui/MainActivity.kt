@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var password: TextInputEditText
     private lateinit var btnLogin: Button
     private lateinit var tvSignUp: TextView
+    private lateinit var tvAdmin: TextView
     private lateinit var linearLayout: LinearLayout
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,6 +34,7 @@ class MainActivity : AppCompatActivity() {
         password = findViewById(R.id.etpassword)
         btnLogin = findViewById(R.id.btnLogin)
         tvSignUp = findViewById(R.id.tvSignUp)
+        tvAdmin = findViewById(R.id.tvAdmin)
         linearLayout = findViewById(R.id.linearlayout)
 
         btnLogin.setOnClickListener {
@@ -44,6 +46,10 @@ class MainActivity : AppCompatActivity() {
 
         tvSignUp.setOnClickListener {
             val intent1 = Intent( this@MainActivity, RegisterActivity::class.java)
+            startActivity(intent1)
+        }
+        tvAdmin.setOnClickListener {
+            val intent1 = Intent( this@MainActivity, Admin_Login::class.java)
             startActivity(intent1)
         }
     }
