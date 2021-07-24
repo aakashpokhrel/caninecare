@@ -27,6 +27,6 @@ class Admin_Login : AppCompatActivity() {
      //       val intent = Intent(this@Admin_Login, Admin_dashboard::class.java)
      //       startActivity(intent)
 
-        }
+      //  }
     }
 }
