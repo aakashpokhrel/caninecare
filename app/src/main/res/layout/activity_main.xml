@@ -97,6 +97,17 @@
         android:text="Sign-up/Register"
         android:textColor="@color/black"/>
 
+    <TextView
+        android:textSize="15sp"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:id="@+id/tvAdmin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Admin Login"
+        android:textColor="@color/black"/>
+
+
 
 
 
