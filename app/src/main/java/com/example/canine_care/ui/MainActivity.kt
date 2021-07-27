@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var username: TextInputEditText
     private lateinit var password: TextInputEditText
     private lateinit var btnLogin: Button
-    private lateinit var tvSignUp: TextView
+    private lateinit var btnSignUp: Button
     private lateinit var linearLayout: LinearLayout
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         username = findViewById(R.id.etusername)
         password = findViewById(R.id.etpassword)
         btnLogin = findViewById(R.id.btnLogin)
-        tvSignUp = findViewById(R.id.tvSignUp)
+        btnSignUp = findViewById(R.id.btnSignUp)
         linearLayout = findViewById(R.id.linearlayout)
 
         btnLogin.setOnClickListener {
@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
             login()
         }
 
-        tvSignUp.setOnClickListener {
+        btnSignUp.setOnClickListener {
             val intent1 = Intent( this@MainActivity, RegisterActivity::class.java)
             startActivity(intent1)
         }

@@ -4,18 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center"
+
     android:orientation="vertical"
     android:id="@+id/linearlayout"
     android:background="@drawable/bg"
+    android:padding="20dp"
     tools:context=".ui.MainActivity">
 
-    <LinearLayout
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+
+
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -26,7 +24,6 @@
         android:layout_marginLeft="95dp"
         android:layout_marginTop="80dp"/>
 
-
     <ImageView
         android:layout_width="500dp"
         android:layout_height="200dp"
@@ -34,70 +31,129 @@
         android:padding="25dp"
         android:src="@drawable/logo" />
 
-
-    <com.google.android.material.textfield.TextInputLayout
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etusername"
-            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="@color/white"
+
             android:hint="Username"
-            android:textSize="15sp" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etpassword"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etusername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="@color/white"
+
             android:hint="Password"
-            android:inputType="textPassword"
-            android:textSize="15sp"/>
-    </com.google.android.material.textfield.TextInputLayout>
+            app:passwordToggleEnabled="true"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
 
-    <CheckBox
-        android:layout_margin="10dp"
-        android:layout_gravity="left"
-        android:id="@+id/chkRememberMe"
-        android:text="Remember Username"
-        android:textColor="@color/black"
-        android:gravity="center"
-        android:layout_marginRight="3000dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etpassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
-        android:id="@+id/btnLogin"
-        android:layout_width="150dp"
-        android:layout_gravity="center"
-        android:layout_height="wrap_content"
-        android:layout_margin="11dp"
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/black"
+            android:text="Login"
+            android:textColor="#fff"
+            app:backgroundTint="#F44336" />
 
-        android:text="Login"
-        android:textColor="#FFFFFF" />
-
-    <TextView
-        android:textSize="15sp"
-        android:layout_margin="10dp"
-        android:gravity="center"
-        android:id="@+id/tvSignUp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Sign-up/Register"
-        android:textColor="@color/black"/>
+        <Button
+            android:id="@+id/btnSignUp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_margin="5dp"
+            android:fontFamily="sans-serif"
+            android:text="New User? Sign Up"
+            android:textColor="@color/black"
+            app:backgroundTint="#FFFFFF" />
 
 
+        <!--        <TextView-->
+        <!--            android:id="@+id/tvMargin"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_margin="30dp"-->
+        <!--            android:textSize="10sp" />-->
+
+        <!--        <ImageView-->
+        <!--            android:id="@+id/imgView"-->
+        <!--            android:layout_width="100dp"-->
+        <!--            android:layout_height="100dp"-->
+        <!--            android:layout_gravity="center"-->
+        <!--            android:src="@drawable/toplogo" />-->
+
+        <!--        <TextView-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:text="Login"-->
+        <!--            android:textSize="40sp"-->
+        <!--            android:gravity="center"-->
+        <!--            android:textColor="@color/white"/>-->
+
+        <!--        <EditText-->
+        <!--            android:id="@+id/edtusername"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:hint="Enter username"-->
+        <!--            android:textSize="40sp"-->
+        <!--            android:gravity="center"-->
+        <!--            android:layout_marginTop="10dp"-->
+        <!--            android:layout_marginLeft="20dp"-->
+        <!--            android:layout_marginRight="20dp"-->
+        <!--            android:background="@color/white"/>-->
 
 
+        <!--        <EditText-->
+        <!--            android:id="@+id/edtpassword"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:hint="Enter password"-->
+        <!--            android:gravity="center"-->
+        <!--            android:layout_marginTop="20dp"-->
+        <!--            android:layout_marginLeft="20dp"-->
+        <!--            android:layout_marginRight="20dp"-->
+        <!--            android:textSize="40sp"-->
+        <!--            android:background="@color/white"/>-->
+
+        <!--        <Button-->
+        <!--            android:id="@+id/btnLogin"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:text="Login"-->
+        <!--            android:textSize="30sp"-->
+        <!--            android:layout_marginLeft="130dp"-->
+        <!--            android:layout_marginRight="5dp"-->
+        <!--            android:layout_marginTop="20dp" />-->
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/tvSignUp"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:text="No Account? SignUp"-->
+        <!--            android:textStyle="bold"-->
+        <!--            android:textSize="20sp"-->
+        <!--            android:textColor="@color/white"-->
+        <!--            />-->
+    </LinearLayout>
 </LinearLayout>

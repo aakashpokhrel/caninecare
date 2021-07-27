@@ -16,13 +16,13 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class RegisterActivity : AppCompatActivity() {
-    private lateinit var edtfname: EditText
-    private lateinit var edtlname: EditText
-    private lateinit var edtemail: EditText
-    private lateinit var edtusername: EditText
-    private lateinit var edtpassword: EditText
+    private lateinit var edtfname: TextInputEditText
+    private lateinit var edtlname: TextInputEditText
+    private lateinit var edtemail: TextInputEditText
+    private lateinit var edtusername: TextInputEditText
+    private lateinit var edtpassword: TextInputEditText
     private lateinit var btnRegistration: Button
-    private lateinit var btnLogin: Button
+    private lateinit var btnLogin : Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
@@ -48,6 +48,7 @@ class RegisterActivity : AppCompatActivity() {
             val username = edtusername.text.toString()
             val password = edtpassword.text.toString()
 
+
             val intent = Intent(this@RegisterActivity, MainActivity::class.java)
             startActivity(intent)
 
@@ -55,32 +56,27 @@ class RegisterActivity : AppCompatActivity() {
                 edtpassword.error = "Password does not match"
                 edtpassword.requestFocus()
                 return@setOnClickListener
-            } else {
-                val user = User(
-                    fname = fname,
-                    lname = lname,
-                    username = username,
-                    email = email,
-                    password = password
-                )
+            }else{
+                val user = User(fname = fname,lname = lname, username =  username, email = email, password =  password)
                 CoroutineScope(Dispatchers.IO).launch {
 //                    UserDB.getInstance(this@RegisterActivity).getUserDAO().registerUser(user)
                     try {
                         val userRepository = UserRepository()
                         val response = userRepository.registerUser(user)
-                        if (response.success == true) {
+                        if(response.success == true){
                             withContext(Dispatchers.Main) {
                                 Toast.makeText(
-                                    this@RegisterActivity,
-                                    "Register SuccessFull", Toast.LENGTH_SHORT
+                                        this@RegisterActivity,
+                                        "Register SuccessFull", Toast.LENGTH_SHORT
                                 ).show()
+
                             }
                         }
                     } catch (ex: Exception) {
                         withContext(Dispatchers.Main) {
                             Toast.makeText(
-                                this@RegisterActivity,
-                                "Username cannot be duplicate", Toast.LENGTH_SHORT
+                                    this@RegisterActivity,
+                                    "Username cannot be duplicate", Toast.LENGTH_SHORT
                             ).show()
 
                         }
@@ -89,5 +85,8 @@ class RegisterActivity : AppCompatActivity() {
                 Toast.makeText(this, "User Registered", Toast.LENGTH_SHORT).show()
             }
         }
+
+
     }
+
 }

@@ -4,76 +4,124 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center"
     android:orientation="vertical"
     android:background="@drawable/bg"
+    android:padding="20dp"
     tools:context=".ui.RegisterActivity">
 
-
     <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Registration"
+    android:textSize="40dp"
+    android:textStyle="bold"
+    android:textColor="@color/black"
+    android:layout_marginLeft="85dp"
+    android:layout_marginTop="80dp"
+    android:layout_marginBottom="35dp"/>
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Registration"
-        android:textSize="40dp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:layout_marginLeft="85dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginBottom="35dp"/>
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp">
 
-    <EditText
-        android:id="@+id/edtfname"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:hint="First Name" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
 
-    <EditText
-        android:hint="Last Name"
-        android:layout_margin="10dp"
-        android:id="@+id/edtlname"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-    <EditText
-        android:hint="Email"
-        android:layout_margin="10dp"
-        android:id="@+id/edtemail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+            android:hint="FirstName"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
 
-    <EditText
-        android:hint="Username"
-        android:layout_margin="10dp"
-        android:id="@+id/edtusername"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtfname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:hint="LastName"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtlname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:hint="Email"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtemail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:hint="Username"
+            app:passwordToggleEnabled="true"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtusername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:hint="Password"
+            app:passwordToggleEnabled="true"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtpassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
 
-    <EditText
-        android:hint="Password"
-        android:layout_margin="10dp"
-        android:id="@+id/edtpassword"
-        android:inputType="textPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
 
-    <Button
-        android:text="Register"
-        android:layout_margin="10dp"
-        android:height="50dp"
-        android:id="@+id/btnRegistration"
-        android:layout_width="150dp"
-        android:layout_gravity="center"
-        android:layout_height="wrap_content"/>
 
-    <Button
-        android:text="Back to Login"
-        android:layout_margin="10dp"
-        android:height="50dp"
-        android:id="@+id/btnLogin"
-        android:layout_width="180dp"
-        android:layout_gravity="center"
-        android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btnRegistration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="#fff"
+            android:backgroundTint="#F44336"/>
 
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="345dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+
+            android:fontFamily="sans-serif"
+            android:text="Already Have an Account ! Login"
+            android:textColor="@color/black"
+            app:backgroundTint="#FFFFFF" />
+
+
+    </LinearLayout>
 
 </LinearLayout>
