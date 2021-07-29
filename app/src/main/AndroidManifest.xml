@@ -19,7 +19,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Canine_Care"
         android:usesCleartextTraffic="true">>
-        <activity android:name=".ui.User_dashboard"></activity>
+        <activity android:name=".ui.UserDashboard"></activity>
         <activity android:name=".ui.RegisterActivity" />
         <activity android:name=".ui.MainActivity">
             <intent-filter>

@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.LinearLayout
-import android.widget.TextView
 import android.widget.Toast
 import com.example.canine_care.R
 import com.example.canine_care.api.ServiceBuilder
@@ -63,7 +62,7 @@ class MainActivity : AppCompatActivity() {
                         Intent(
                             this@MainActivity,
 //                            Dashboard::class.java
-                            User_dashboard::class.java
+                            UserDashboard::class.java
                         )
                     )
                     finish()
