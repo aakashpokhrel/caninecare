@@ -1,5 +1,6 @@
 package com.example.canine_care.ui
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
@@ -31,5 +32,19 @@ class UserDashboard : AppCompatActivity() {
         imaboutus = findViewById(R.id.imaboutus)
         imfeedback = findViewById(R.id.imfeedback)
         imlogout = findViewById(R.id.imlogout)
+
+        improduct.setOnClickListener {
+            val intent = Intent(this@UserDashboard, ViewProductActivity::class.java)
+            startActivity(intent)
+        }
+
+        imhome.setOnClickListener {
+            val intent = Intent(this@UserDashboard, AddProductActivity::class.java)
+            startActivity(intent)
+        }
+        imcart.setOnClickListener {
+            val intent = Intent(this@UserDashboard, UpdateProductActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
