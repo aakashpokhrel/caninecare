@@ -18,8 +18,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Canine_Care"
-        android:usesCleartextTraffic="true">>
-        <activity android:name=".ui.UserDashboard"></activity>
+        android:usesCleartextTraffic="true">
+        <activity android:name=".ui.UserDashboard" />
+        <activity android:name=".ui.AddProductActivity" />
+        <activity android:name=".ui.UpdateProductActivity" />
+        <activity android:name=".ui.ViewProductActivity" />
         <activity android:name=".ui.RegisterActivity" />
         <activity android:name=".ui.MainActivity">
             <intent-filter>
