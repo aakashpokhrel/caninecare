@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Environment
 import android.provider.MediaStore
@@ -12,7 +13,6 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.PopupMenu
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import com.example.canine_care.R
 import com.example.canine_care.entity.Product
 import com.example.canine_care.repository.ProductRepository
@@ -30,25 +30,24 @@ import java.io.FileOutputStream
 import java.text.SimpleDateFormat
 import java.util.*
 
-
 class AddProductActivity : AppCompatActivity() {
-    private lateinit var etpname: TextInputEditText
-    private lateinit var etdescription: TextInputEditText
-    private lateinit var etprice: TextInputEditText
+    private lateinit var etPname: TextInputEditText
+    private lateinit var etDesc: TextInputEditText
+    private lateinit var etPrice: TextInputEditText
     private lateinit var img: ImageView
     private lateinit var btnSave: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_product)
-        etpname = findViewById(R.id.etpname)
-        etdescription = findViewById(R.id.etdescription)
-        etprice = findViewById(R.id.etprice)
+        etPname = findViewById(R.id.etPname)
+        etDesc = findViewById(R.id.etDesc)
+        etPrice = findViewById(R.id.etPrice)
         btnSave = findViewById(R.id.btnSave)
         img = findViewById(R.id.img)
 
         btnSave.setOnClickListener{
-            saveShow()
+            saveProduct()
         }
         img.setOnClickListener{
             loadPopUpMenu()
@@ -77,13 +76,13 @@ class AddProductActivity : AppCompatActivity() {
 
 
 
-    private fun saveShow() {
+    private fun saveProduct() {
 
-        val pname = etpname.text.toString()
-        val description = etdescription.text.toString().toInt()
-        val price = etprice.text.toString().toInt()
+        val Pname = etPname.text.toString()
+        val Desc = etDesc.text.toString()
+        val Price = etPrice.text.toString().toInt()
 
-        val product = Product(pname = pname, description = description, price = price)
+        val product = Product(Pname = Pname, Desc = Desc, Price = Price)
         CoroutineScope(Dispatchers.IO).launch {
             try {
                 val productRepository = ProductRepository()
@@ -186,7 +185,7 @@ class AddProductActivity : AppCompatActivity() {
             file // it will return null
         }
     }
-    private fun uploadImage(showId: String) {
+    private fun uploadImage(productId: String) {
         if (imageUrl != null) {
             val file = File(imageUrl!!)
             val reqFile =
@@ -196,7 +195,7 @@ class AddProductActivity : AppCompatActivity() {
             CoroutineScope(Dispatchers.IO).launch {
                 try {
                     val productRepository = ProductRepository()
-                    val response = productRepository.uploadImage(showId, body)
+                    val response = productRepository.uploadImage(productId, body)
                     if (response.success == true) {
                         withContext(Dispatchers.Main) {
                             Toast.makeText(this@AddProductActivity, "Uploaded", Toast.LENGTH_SHORT)
@@ -217,4 +216,3 @@ class AddProductActivity : AppCompatActivity() {
         }
     }
 }
-

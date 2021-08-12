@@ -1,12 +1,14 @@
 package com.example.canine_care.ui
 
 import android.content.Intent
+import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.Toast
+import androidx.core.app.ActivityCompat
 import com.example.canine_care.R
 import com.example.canine_care.api.ServiceBuilder
 import com.example.canine_care.repository.UserRepository
@@ -18,6 +20,12 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class MainActivity : AppCompatActivity() {
+
+    private val permissions = arrayOf(
+        android.Manifest.permission.CAMERA,
+        android.Manifest.permission.WRITE_EXTERNAL_STORAGE,
+        android.Manifest.permission.ACCESS_FINE_LOCATION
+    )
 
     private lateinit var username: TextInputEditText
     private lateinit var password: TextInputEditText
@@ -45,6 +53,31 @@ class MainActivity : AppCompatActivity() {
             val intent1 = Intent( this@MainActivity, RegisterActivity::class.java)
             startActivity(intent1)
         }
+    }
+
+    private fun checkRunTimePermission() {
+        if (!hasPermission()) {
+            requestPermission()
+        }
+    }
+
+    private fun hasPermission(): Boolean {
+        var hasPermission = true
+        for (permission in permissions) {
+            if (ActivityCompat.checkSelfPermission(
+                    this,
+                    permission
+                ) != PackageManager.PERMISSION_GRANTED
+            ) {
+                hasPermission = false
+                break
+            }
+        }
+        return hasPermission
+    }
+
+    private fun requestPermission() {
+        ActivityCompat.requestPermissions(this@MainActivity, permissions, 1)
     }
 
     private fun login() {

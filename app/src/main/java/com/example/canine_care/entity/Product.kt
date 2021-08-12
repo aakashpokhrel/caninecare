@@ -3,27 +3,27 @@ package com.example.canine_care.entity
 import android.os.Parcel
 import android.os.Parcelable
 
-data class Product (
+class Product (
     val _id: String? = null,
-    val pname: String? = null,
-    val description: Int? = null,
-    val price: Int? = null,
+    val Pname: String? = null,
+    val Desc: String? = null,
+    val Price: Int? = null,
     val photo: String? = null
-
-    ): Parcelable {
+        ): Parcelable {
     constructor(parcel: Parcel) : this(
-            parcel.readString(),
-            parcel.readString(),
-            parcel.readValue(Int::class.java.classLoader) as? Int,
-            parcel.readValue(Int::class.java.classLoader) as? Int,
-            parcel.readString()) {
+        parcel.readString(),
+        parcel.readString(),
+        parcel.readString(),
+        parcel.readValue(Int::class.java.classLoader) as? Int,
+        parcel.readString()
+    ) {
     }
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(_id)
-        parcel.writeString(pname)
-        parcel.writeValue(description)
-        parcel.writeValue(price)
+        parcel.writeString(Pname)
+        parcel.writeString(Desc)
+        parcel.writeValue(Price)
         parcel.writeString(photo)
     }
 

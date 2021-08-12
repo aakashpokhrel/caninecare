@@ -23,7 +23,8 @@ class ViewProductActivity : AppCompatActivity() {
         recyclerview = findViewById(R.id.recyclerview)
         getAllProduct()
     }
-    private fun getAllProduct(){
+
+    private fun getAllProduct() {
         CoroutineScope(Dispatchers.IO).launch {
             try {
                 val productRepository = ProductRepository()

@@ -15,7 +15,7 @@ class ProductRepository: MyApiRequest() {
     private  val productAPI =
         ServiceBuilder.buildService(ProductAPI::class.java)
 
-    //Add product
+    //Add student
     suspend fun addProduct(product : Product): AddProductResponse {
         return apiRequest {
             productAPI.addProduct(
@@ -23,7 +23,7 @@ class ProductRepository: MyApiRequest() {
             )
         }
     }
-    //View product
+    //View Students
     suspend fun getAllProduct(): GetAllProductResponse {
         return apiRequest {
             productAPI.getAllProduct(
@@ -31,7 +31,7 @@ class ProductRepository: MyApiRequest() {
             )
         }
     }
-    //Delete product
+    //Delete Student
     suspend fun deleteProduct(id :String): DeleteProductResponse {
         return apiRequest {
             productAPI.deleteProduct(
@@ -39,8 +39,8 @@ class ProductRepository: MyApiRequest() {
             )
         }
     }
-    //Update product
-    suspend fun updateProduct(id :String,product: Product): DeleteProductResponse{
+    //Update Student
+    suspend fun updateProduct(id :String,product: Product): DeleteProductResponse {
         return apiRequest {
             productAPI.updateProduct(
                 ServiceBuilder.token!!, id, product

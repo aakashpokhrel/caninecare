@@ -1,5 +1,5 @@
 package com.example.canine_care.response
 
-class DeleteProductResponse(
+class DeleteProductResponse (
     val success : Boolean? = null
-)
+        )
