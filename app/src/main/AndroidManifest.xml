@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Canine_Care">
-        <activity android:name=".ui.User_dashboard"></activity>
+        <activity android:name=".ui.ProfileActivity"></activity>
+        <activity android:name=".ui.User_dashboard" />
         <activity android:name=".ui.RegisterActivity" />
         <activity android:name=".ui.MainActivity">
             <intent-filter>
