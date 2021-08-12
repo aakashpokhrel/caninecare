@@ -2,15 +2,32 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.canine_care">
 
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Canine_Care">
         <activity android:name=".ui.ProfileActivity"></activity>
         <activity android:name=".ui.User_dashboard" />
+
+        android:theme="@style/Theme.Canine_Care"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".ui.UserDashboard" />
+        <activity android:name=".ui.AddProductActivity" />
+        <activity android:name=".ui.UpdateProductActivity" />
+        <activity android:name=".ui.ViewProductActivity" />
+
         <activity android:name=".ui.RegisterActivity" />
         <activity android:name=".ui.MainActivity">
             <intent-filter>
