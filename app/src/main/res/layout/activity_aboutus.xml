@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context=".ui.AboutusActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="About us"
+        android:textColor="#4d79ff"
+        android:textStyle="bold"
+        android:textSize="40dp"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="About Canine Care"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textColor="#0066cc"
+        android:drawableTint="#4d79ff"
+        android:drawableLeft="@drawable/aboutus"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginTop="0dp"/>
+
+    <TextView
+        android:id = "@+id/maplocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Map(Location of our office)"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textColor="#0066cc"
+        android:drawableLeft="@drawable/location"
+        android:drawableTint="#4d79ff"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginTop="0dp"/>
+
+    <TextView
+        android:id = "@+id/theme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Theme"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textColor="#0066cc"
+        android:drawableLeft="@drawable/theme"
+        android:drawableTint="#4d79ff"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginTop="0dp"/>
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:text="copyright 2020 by Canine Care "
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="60dp"
+        android:textColor="#0066cc"
+        android:drawableLeft="@drawable/copyright"
+        android:drawableTint="#4d79ff"/>
+
+
+</LinearLayout>

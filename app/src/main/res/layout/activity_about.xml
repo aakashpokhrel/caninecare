@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bgimg"
+    tools:context=".ui.AboutActivity">
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="100dp"
+        android:src="@drawable/logo"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Canine Care is an online service designated to improve the quality of life of dogs in context of Nepal. The culture of owning and domesticating pets, especially dogs can be seen increasingly in Nepalese society. Dogs are loved and worshipped in Nepal. They are of religious and social significance. Dogs are even considered as a man's best friend. "
+        android:textSize="27dp"
+        android:gravity="center"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="5dp"
+        android:textColor="@color/black"
+        android:fontFamily="cursive"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Canine Care Nepal aims at being the online portal to host all the canine-related stuffs and services such as foster homes and shelter, immediate health care and rights to provide utmost care to dogs and raise them properly. It will host all the necessary information, tips and suggestions necessary for the proper supervision of the dogs.
+"
+        android:textSize="27dp"
+        android:gravity="center"
+        android:layout_marginLeft="5dp"
+        android:textColor="@color/black"
+        android:fontFamily="cursive"/>
+
+</LinearLayout>

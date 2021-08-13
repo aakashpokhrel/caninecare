@@ -36,15 +36,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        username = findViewById(R.id.etusername)
+       username = findViewById(R.id.etusername)
         password = findViewById(R.id.etpassword)
         btnLogin = findViewById(R.id.btnLogin)
         btnSignUp = findViewById(R.id.btnSignUp)
         linearLayout = findViewById(R.id.linearlayout)
 
         btnLogin.setOnClickListener {
-//            val intent = Intent(this@MainActivity, Dashboard::class.java)
-//            startActivity(intent)
+            val intent = Intent(this@MainActivity, UserDashboard::class.java)
+            startActivity(intent)
 
             login()
         }
