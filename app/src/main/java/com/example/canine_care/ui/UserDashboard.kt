@@ -46,5 +46,24 @@ class UserDashboard : AppCompatActivity() {
             val intent = Intent(this@UserDashboard, UpdateProductActivity::class.java)
             startActivity(intent)
         }
+        improfile.setOnClickListener {
+            val intent = Intent(this, ProfileActivity::class.java)
+            startActivity(intent)
+        }
+
+        immedical.setOnClickListener{
+            val intent = Intent(this, MedicalActivity::class.java)
+            startActivity(intent)
+        }
+
+        imaboutus.setOnClickListener{
+            val intent = Intent(this, AboutusActivity::class.java)
+            startActivity(intent)
+        }
+
+        imfeedback.setOnClickListener{
+            val intent = Intent(this, FeedbackActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

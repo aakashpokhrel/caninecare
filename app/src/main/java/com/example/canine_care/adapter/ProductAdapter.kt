@@ -10,12 +10,13 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import com.aakash.ticketbooking.R
-import com.aakash.ticketbooking.api.ServiceBuilder
-import com.aakash.ticketbooking.entity.Product
-import com.aakash.ticketbooking.repository.ProductRepository
-import com.aakash.ticketbooking.ui.UpdateProductActivity
+
 import com.bumptech.glide.Glide
+import com.example.canine_care.R
+import com.example.canine_care.api.ServiceBuilder
+import com.example.canine_care.entity.Product
+import com.example.canine_care.repository.ProductRepository
+import com.example.canine_care.ui.UpdateProductActivity
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

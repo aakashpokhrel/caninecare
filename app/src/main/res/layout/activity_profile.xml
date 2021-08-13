@@ -1,9 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ui.ProfileActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/white"
+        android:text="Profile"
+        android:textColor="#4d79ff"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:gravity="left"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgProfile"
+        android:layout_width="149dp"
+        android:layout_height="130dp"
+        android:src="@drawable/profileimg"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="125dp"/>
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@drawable/user"
+        android:drawableTint="#4d79ff"
+        android:text="Username"
+        android:textColor=" #0066cc"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        />
+
+    <EditText
+        android:id="@+id/Profilename"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@drawable/email"
+        android:drawableTint="#4d79ff"
+        android:textColor=" #0066cc"
+        android:text="Email"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        />
+
+    <EditText
+        android:id="@+id/Profileemail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@drawable/key"
+        android:drawableTint="#4d79ff"
+        android:textColor=" #0066cc"
+        android:text="Password"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Profilepassword"
+        android:layout_marginTop="0dp"/>
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:drawableLeft="@drawable/phone"-->
+<!--        android:drawableTint="#4d79ff"-->
+<!--        android:text="Mobile no."-->
+<!--        android:textColor=" #0066cc"-->
+<!--        android:textSize="18dp"-->
+<!--        android:textStyle="bold"-->
+<!--        />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/Profilephone"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="0dp"/>-->
+
+    <Button
+        android:id="@+id/btnprofileupdate"
+        android:layout_width="250dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        android:text="Update Profile"
+        android:textSize="20dp"
+        android:layout_gravity="center"
+        android:backgroundTint=" #0066cc"/>
+
+
+
+</LinearLayout>
+
