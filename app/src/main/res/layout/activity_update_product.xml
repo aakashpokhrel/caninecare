@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Show Details"
+            android:text="Product Details"
             android:textSize="30sp"
             android:textStyle="bold" />
 
@@ -26,7 +26,7 @@
             android:layout_height="wrap_content">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etUpPname"
+                android:id="@+id/etPname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -42,7 +42,7 @@
             android:layout_height="wrap_content">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etUpDesc"
+                android:id="@+id/etDesc"
                 android:layout_width="match_parent"
 
                 android:layout_height="wrap_content"
@@ -62,7 +62,7 @@
             android:layout_height="wrap_content">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etUpPrice"
+                android:id="@+id/etPrice"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -84,7 +84,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginRight="20dp"
             android:background="@color/teal_200"
-            android:text="Update Show"
+            android:text="Update Product"
             android:textAllCaps="false"
             android:textColor="#FFFFFF" />
     </LinearLayout>

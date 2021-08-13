@@ -63,6 +63,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.MainActivity" />
+        <activity android:name=".ui.AddProductActivity" />
+        <activity android:name=".ui.ViewProductActivity" />
+        <activity android:name=".ui.UpdateProductActivity" />
     </application>
 
 </manifest>

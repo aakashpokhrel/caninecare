@@ -33,8 +33,9 @@ class UserDashboard : AppCompatActivity() {
         imfeedback = findViewById(R.id.imfeedback)
         imlogout = findViewById(R.id.imlogout)
 
-        improduct.setOnClickListener {
-            val intent = Intent(this@UserDashboard, ViewProductActivity::class.java)
+
+        improfile.setOnClickListener {
+            val intent = Intent(this@UserDashboard, ProfileActivity::class.java)
             startActivity(intent)
         }
 
@@ -42,14 +43,16 @@ class UserDashboard : AppCompatActivity() {
             val intent = Intent(this@UserDashboard, AddProductActivity::class.java)
             startActivity(intent)
         }
+
+        improduct.setOnClickListener {
+            val intent = Intent(this@UserDashboard, ViewProductActivity::class.java)
+            startActivity(intent)
+        }
         imcart.setOnClickListener {
             val intent = Intent(this@UserDashboard, UpdateProductActivity::class.java)
             startActivity(intent)
         }
-        improfile.setOnClickListener {
-            val intent = Intent(this, ProfileActivity::class.java)
-            startActivity(intent)
-        }
+
 
         immedical.setOnClickListener{
             val intent = Intent(this, MedicalActivity::class.java)

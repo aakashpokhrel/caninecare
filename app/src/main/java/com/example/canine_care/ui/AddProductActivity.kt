@@ -40,9 +40,9 @@ class AddProductActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_product)
-        etPname = findViewById(R.id.etAddPname)
-        etDesc = findViewById(R.id.etAddDesc)
-        etPrice = findViewById(R.id.etAddPrice)
+        etPname = findViewById(R.id.etPname)
+        etDesc = findViewById(R.id.etDesc)
+        etPrice = findViewById(R.id.etPrice)
         btnSave = findViewById(R.id.btnSave)
         img = findViewById(R.id.img)
 
