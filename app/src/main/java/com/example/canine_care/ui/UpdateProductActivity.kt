@@ -24,9 +24,9 @@ class UpdateProductActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_update_product)
-        etPname = findViewById(R.id.etUpPname)
-        etDesc = findViewById(R.id.etUpDesc)
-        etPrice = findViewById(R.id.etUpPrice)
+        etPname = findViewById(R.id.etPname)
+        etDesc = findViewById(R.id.etDesc)
+        etPrice = findViewById(R.id.etPrice)
         btnUpdate = findViewById(R.id.btnUpdate)
 //        img = findViewById(R.id.img)
 

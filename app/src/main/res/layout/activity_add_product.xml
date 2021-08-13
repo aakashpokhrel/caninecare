@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Add Show Details"
+            android:text="Add Product Details"
             android:background="@color/cardview_dark_background"
             android:textColor="#ffffcc"
             android:textSize="30sp"
@@ -35,7 +35,7 @@
             android:layout_height="wrap_content">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etAddPname"
+                android:id="@+id/etPname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -51,7 +51,7 @@
             android:layout_height="wrap_content">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etAddDesc"
+                android:id="@+id/etDesc"
                 android:layout_width="match_parent"
 
                 android:layout_height="wrap_content"
@@ -71,7 +71,7 @@
             android:layout_height="wrap_content">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etAddPrice"
+                android:id="@+id/etPrice"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
