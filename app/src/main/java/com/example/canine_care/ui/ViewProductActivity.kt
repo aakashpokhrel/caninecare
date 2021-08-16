@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.canine_care.R
 import com.example.canine_care.adapter.ProductAdapter
+import com.example.canine_care.entity.Product
 import com.example.canine_care.repository.ProductRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -31,10 +32,11 @@ class ViewProductActivity : AppCompatActivity() {
                 val response = productRepository.getAllProduct()
                 if(response.success == true){
                     //Product details in listProduct
-                    val listProduct = response.data
+                    val lstProducts = response.data
                     withContext(Dispatchers.Main){
-                        recyclerview.adapter = ProductAdapter( listProduct!!, this@ViewProductActivity,)
+                        val adapter = ProductAdapter(lstProducts as ArrayList<Product>, this@ViewProductActivity)
                         recyclerview.layoutManager = LinearLayoutManager(this@ViewProductActivity)
+                        recyclerview.adapter = adapter
                     }
                 }
 

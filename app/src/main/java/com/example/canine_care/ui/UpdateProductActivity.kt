@@ -32,9 +32,9 @@ class UpdateProductActivity : AppCompatActivity() {
 
         val intent = intent.getParcelableExtra<Product>("product")
         if (intent != null) {
-            etPname.setText(intent.Pname)
-            etDesc.setText(intent.Desc)
-            etPrice.setText(intent.Price.toString())
+            etPname.setText(intent.pname)
+            etDesc.setText(intent.desc)
+            etPrice.setText(intent.price.toString())
 
 
 //            btnUpdate.setOnClickListener(this)
@@ -63,7 +63,7 @@ class UpdateProductActivity : AppCompatActivity() {
         val Desc = etDesc.text.toString()
         val Price = etPrice.text.toString().toInt()
 
-        val product = Product(Pname = Pname, Desc = Desc, Price = Price)
+        val product = Product(pname = Pname, desc = Desc, price = Price)
         CoroutineScope(Dispatchers.IO).launch {
             try {
                 val productRepository = ProductRepository()

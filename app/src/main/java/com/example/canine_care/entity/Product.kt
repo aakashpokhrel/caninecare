@@ -5,9 +5,9 @@ import android.os.Parcelable
 
 class Product (
     val _id: String? = null,
-    val Pname: String? = null,
-    val Desc: String? = null,
-    val Price: Int? = null,
+    val pname: String? = null,
+    val desc: String? = null,
+    val price: Int? = null,
     val photo: String? = null
         ): Parcelable {
     constructor(parcel: Parcel) : this(
@@ -21,9 +21,9 @@ class Product (
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(_id)
-        parcel.writeString(Pname)
-        parcel.writeString(Desc)
-        parcel.writeValue(Price)
+        parcel.writeString(pname)
+        parcel.writeString(desc)
+        parcel.writeValue(price)
         parcel.writeString(photo)
     }
 
