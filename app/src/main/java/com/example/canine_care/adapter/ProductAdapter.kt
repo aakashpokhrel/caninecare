@@ -16,7 +16,7 @@ import com.example.canine_care.R
 import com.example.canine_care.api.ServiceBuilder
 import com.example.canine_care.entity.Product
 import com.example.canine_care.repository.ProductRepository
-import com.example.canine_care.ui.UpdateProductActivity
+//import com.example.canine_care.ui.UpdateProductActivity
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -36,7 +36,7 @@ class ProductAdapter (
             tvPname= view.findViewById(R.id.tvPname)
             tvDesc= view.findViewById(R.id.tvDesc)
             tvPrice= view.findViewById(R.id.tvPrice)
-            image = view.findViewById(R.id.stdimg)
+            image = view.findViewById(R.id.stdimage)
             delete = view.findViewById(R.id.delete)
             update = view.findViewById(R.id.update)
         }
@@ -53,9 +53,9 @@ class ProductAdapter (
 
     override fun onBindViewHolder(holder: ProductAdapter.ShowViewHolder, position: Int) {
         val prdlst = listProduct[position]
-        holder.tvPname.text = prdlst.Pname
-        holder.tvDesc.text = prdlst.Desc.toString()
-        holder.tvPrice.text = prdlst.Price.toString()
+        holder.tvPname.text = prdlst.pname
+        holder.tvDesc.text = prdlst.desc.toString()
+        holder.tvPrice.text = prdlst.price.toString()
         val imagePath = ServiceBuilder.loadImagePath() + prdlst.photo
         if (!prdlst.photo.equals("no-photo.jpg")) {
             Glide.with(context)
@@ -63,15 +63,15 @@ class ProductAdapter (
                 .fitCenter()
                 .into(holder.image)
         }
-        holder.update.setOnClickListener{
-            val intent = Intent(context, UpdateProductActivity::class.java)
-            intent.putExtra("product", prdlst)
-            context.startActivity(intent)
-        }
+//        holder.update.setOnClickListener{
+//            val intent = Intent(context, UpdateProductActivity::class.java)
+//            intent.putExtra("product", prdlst)
+//            context.startActivity(intent)
+//        }
         holder.delete.setOnClickListener{
             val builder = AlertDialog.Builder(context)
             builder.setTitle("Delete product")
-            builder.setMessage("Are you sure you want to delete ${prdlst.Pname} ??")
+            builder.setMessage("Are you sure you want to delete ${prdlst.pname} ??")
             builder.setIcon(android.R.drawable.ic_delete)
 
             builder.setPositiveButton("Yes") { _, _ ->

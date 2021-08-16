@@ -40,9 +40,9 @@ class AddProductActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_product)
-        etPname = findViewById(R.id.etPname)
-        etDesc = findViewById(R.id.etDesc)
-        etPrice = findViewById(R.id.etPrice)
+        etPname = findViewById(R.id.etAddPname)
+        etDesc = findViewById(R.id.etAddDesc)
+        etPrice = findViewById(R.id.etAddPrice)
         btnSave = findViewById(R.id.btnSave)
         img = findViewById(R.id.img)
 
@@ -82,7 +82,7 @@ class AddProductActivity : AppCompatActivity() {
         val Desc = etDesc.text.toString()
         val Price = etPrice.text.toString().toInt()
 
-        val product = Product(Pname = Pname, Desc = Desc, Price = Price)
+        val product = Product(pname = Pname, desc = Desc, price = Price)
         CoroutineScope(Dispatchers.IO).launch {
             try {
                 val productRepository = ProductRepository()
@@ -110,7 +110,7 @@ class AddProductActivity : AppCompatActivity() {
 
     }
     private fun loadPopUpMenu() {
-        val popupMenu = PopupMenu(this, img)
+        val popupMenu = PopupMenu(this@AddProductActivity, img)
         popupMenu.menuInflater.inflate(R.menu.gallery_camera, popupMenu.menu)
         popupMenu.setOnMenuItemClickListener { item ->
             when (item.itemId) {
