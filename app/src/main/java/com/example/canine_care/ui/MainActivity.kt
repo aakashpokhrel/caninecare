@@ -43,7 +43,8 @@ class MainActivity : AppCompatActivity() {
         linearLayout = findViewById(R.id.linearlayout)
 
         btnLogin.setOnClickListener {
-
+            val intent = Intent(this@MainActivity, UserDashboard::class.java)
+            startActivity(intent)
 
             login()
         }
