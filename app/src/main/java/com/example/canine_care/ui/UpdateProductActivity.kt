@@ -18,7 +18,7 @@ class UpdateProductActivity : AppCompatActivity() {
     private lateinit var etPname: TextInputEditText
     private lateinit var etDesc: TextInputEditText
     private lateinit var etPrice: TextInputEditText
-    private lateinit var img: ImageView
+//    private lateinit var img: ImageView
     private lateinit var btnUpdate: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
