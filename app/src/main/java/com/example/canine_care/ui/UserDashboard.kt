@@ -40,8 +40,8 @@ class UserDashboard : AppCompatActivity() {
         }
 
         imhome.setOnClickListener {
-            val intent = Intent(this@UserDashboard, AddProductActivity::class.java)
-            startActivity(intent)
+//            val intent = Intent(this@UserDashboard, AddProductActivity::class.java)
+//            startActivity(intent)
         }
 
         improduct.setOnClickListener {
@@ -49,7 +49,11 @@ class UserDashboard : AppCompatActivity() {
             startActivity(intent)
         }
         imcart.setOnClickListener {
-            val intent = Intent(this@UserDashboard, UpdateProductActivity::class.java)
+//            val intent = Intent(this@UserDashboard, UpdateProductActivity::class.java)
+//            startActivity(intent)
+        }
+        imadopt.setOnClickListener {
+            val intent = Intent(this@UserDashboard,ViewPetActivity::class.java)
             startActivity(intent)
         }
 
