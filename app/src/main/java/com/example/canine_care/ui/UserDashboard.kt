@@ -3,8 +3,11 @@ package com.example.canine_care.ui
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.ImageView
+import androidx.appcompat.app.ActionBarDrawerToggle
 import com.example.canine_care.R
+import kotlinx.android.synthetic.main.activity_user_dashboard.*
 
 class UserDashboard : AppCompatActivity() {
     private lateinit var improfile: ImageView
@@ -17,6 +20,8 @@ class UserDashboard : AppCompatActivity() {
     private lateinit var imaboutus: ImageView
     private lateinit var imfeedback: ImageView
     private lateinit var imlogout: ImageView
+
+    lateinit var toggle: ActionBarDrawerToggle
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,6 +37,8 @@ class UserDashboard : AppCompatActivity() {
         imaboutus = findViewById(R.id.imaboutus)
         imfeedback = findViewById(R.id.imfeedback)
         imlogout = findViewById(R.id.imlogout)
+
+
 
 
         improfile.setOnClickListener {
@@ -72,5 +79,27 @@ class UserDashboard : AppCompatActivity() {
             val intent = Intent(this, FeedbackActivity::class.java)
             startActivity(intent)
         }
+
+                toggle = ActionBarDrawerToggle(this, drawyerLayout, R.string.open, R.string.close)
+
+        drawyerLayout.addDrawerListener(toggle)
+        toggle.syncState()
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        nav_view.setNavigationItemSelectedListener {
+            when(it.itemId){
+//                R.id.imhome -> Toast.makeText(applicationContext, "clicked home", Toast.LENGTH_SHORT).show()
+            }
+            true
+        }
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        if(toggle.onOptionsItemSelected(item)) {
+            return true
+        }
+        return super.onOptionsItemSelected(item)
     }
 }

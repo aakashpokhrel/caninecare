@@ -8,4 +8,10 @@
     <color name="textColor">#060606</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="colorPrimary">#16AC9B</color>
+    <color name="colorPrimaryDark">#A90BEF</color>
+    <color name="colorAccent">#03DAC5</color>
+
+
 </resources>

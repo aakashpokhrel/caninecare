@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.UserDashboard"
+    android:id="@+id/drawyerLayout"
+    >
+
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -12,39 +22,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="220dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="60dp"
-            android:text="Canine Care"
-            android:textSize="40dp"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            />
 
-        <ImageView
-            android:layout_width="130dp"
-            android:id="@+id/imslogout"
-            android:layout_height="130dp"
-            android:src="@drawable/logo"
-            android:layout_marginTop="-90dp"
-            android:layout_marginRight="-120dp"
-
-
-            android:layout_gravity="center"/>
-
-        <TextView
-            android:layout_width="220dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="120dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="15dp"
-            android:text="Dashboard"
-            android:textSize="30dp"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            />
         <GridLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -437,17 +415,22 @@
 
             </androidx.cardview.widget.CardView>
 
-
-
-
-
-
-
-
-
         </GridLayout>
 
     </LinearLayout>
 
 
 </ScrollView>
+
+    <com.google.android.material.navigation.NavigationView
+
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_gravity="start"
+        android:id="@+id/nav_view"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/user_menu"
+        android:fitsSystemWindows="true"/>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
