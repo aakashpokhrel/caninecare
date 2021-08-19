@@ -23,7 +23,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Canine_Care"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.InformationActivity"></activity>
+        <activity
+            android:name=".ui.ViewAppointmentActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.UpdateAppointmentActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.AddAppointmentActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.AppointmentActivity"
+            android:exported="true" />
+        <activity android:name=".ui.InformationActivity" />
         <activity
             android:name=".ui.UpdatePetActivity"
             android:exported="true" />

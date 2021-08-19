@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import com.example.canine_care.R
 import kotlinx.android.synthetic.main.activity_user_dashboard.*
@@ -89,7 +90,7 @@ class UserDashboard : AppCompatActivity() {
 
         nav_view.setNavigationItemSelectedListener {
             when(it.itemId){
-//                R.id.imhome -> Toast.makeText(applicationContext, "clicked home", Toast.LENGTH_SHORT).show()
+                R.id.imhome -> Toast.makeText(applicationContext, "clicked home", Toast.LENGTH_SHORT).show()
             }
             true
         }

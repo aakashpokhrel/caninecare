@@ -13,6 +13,7 @@ class Dashboard : AppCompatActivity() {
     private lateinit var btnAddProduct: CardView
     private lateinit var btnUpdateProduct: CardView
     private lateinit var btnAddPet : CardView
+    private lateinit var btnViewAppointment : CardView
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,10 +24,18 @@ class Dashboard : AppCompatActivity() {
         btnUpdateProduct = findViewById(R.id.btnUpdateProduct)
         btnAddProduct = findViewById(R.id.btnAddProduct)
         btnAddPet = findViewById(R.id.btnAddPet)
+        btnViewAppointment = findViewById(R.id.btnViewAppointment)
 
         btnAddProduct.setOnClickListener {
             val intent = Intent(
                 this, AddProductActivity::class.java
+            )
+            startActivity(intent)
+        }
+
+        btnViewAppointment.setOnClickListener {
+            val intent = Intent(
+                this, ViewAppointmentActivity::class.java
             )
             startActivity(intent)
         }
