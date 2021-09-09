@@ -44,7 +44,8 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
                 android:background="@color/white"
-                android:hint="Title/Name" />
+                android:inputType="text"
+                android:hint="Pet Name" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -59,6 +60,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
                 android:background="@color/white"
+                android:inputType="number"
                 android:hint="Age (In Month)" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -74,6 +76,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
                 android:background="@color/white"
+                android:inputType="number"
                 android:hint="Available Pieces" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -91,6 +94,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="20dp"
                 android:background="@color/white"
+                android:inputType="textShortMessage"
                 android:hint="Description" />
         </com.google.android.material.textfield.TextInputLayout>
 

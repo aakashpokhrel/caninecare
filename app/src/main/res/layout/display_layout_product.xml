@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="260dp"
+    android:layout_height="300dp"
     android:background="@drawable/white_circular_border"
+    android:backgroundTint="#ff80bf"
     android:layout_margin="5dp"
     android:gravity="center"
     android:layout_marginStart="@dimen/small"
@@ -39,23 +40,29 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <TextView
-                android:layout_width="55dp"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:text="Name:"
+                android:layout_marginTop="10dp"
                 android:textStyle="bold"
                 android:maxLines="1"
-                android:textColor="@color/textColor"
-                android:textSize="15sp" />
+                android:fontFamily="sans-serif-black"
+                android:layout_marginLeft="40dp"
+                android:textColor="#660066"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/tvPname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="product"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="10dp"
                 android:textStyle="bold"
+                android:fontFamily="serif"
                 android:maxLines="1"
-                android:textColor="@color/textColor"
-                android:textSize="15sp" />
+                android:textColor="#660066"
+                android:textSize="23sp" />
 
         </LinearLayout>
 
@@ -68,20 +75,20 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/small"
+               android:fontFamily="sans-serif-black"
                 android:text="Description:"
                 android:textStyle="bold"
-                android:textColor="@color/textColor"
-                android:textSize="12sp" />
+                android:textColor="#000099"
+                android:textSize="18sp" />
             <TextView
                 android:id="@+id/tvDesc"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/small"
-                android:text="Price"
-                android:textStyle="bold"
-                android:textColor="@color/textColor"
-                android:textSize="12sp" />
+                android:layout_height="40dp"
+                android:text="Desc"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="serif"
+                android:textColor="#000099"
+                android:textSize="15sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -91,41 +98,43 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/small"
                 android:text="Price:Rs"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="40dp"
+                android:fontFamily="sans-serif-black"
                 android:textStyle="bold"
-                android:textColor="@color/textColor"
-                android:textSize="12sp" />
+                android:textColor="#800000"
+                android:textSize="18sp" />
             <TextView
                 android:id="@+id/tvPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/small"
-                android:text="Size"
+                android:text="(in Rs.)"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="8dp"
                 android:textStyle="bold"
-                android:textColor="@color/textColor"
-                android:textSize="12sp" />
+                android:fontFamily="serif"
+                android:textColor="#800000"
+                android:textSize="30sp" />
 
         </LinearLayout>
 
 
-
         <Button
             android:id="@+id/btnaddcart"
-            android:layout_width="200dp"
+            android:layout_width="190dp"
             android:layout_height="wrap_content"
-            android:backgroundTint="#ff7c17"
             android:layout_gravity="center"
+            android:layout_marginTop="0dp"
+            android:backgroundTint="#3399ff"
+            android:drawableRight="@drawable/buycart"
             android:text="Add to cart"
+            android:textSize="15dp"
             android:textStyle="bold"
 
             />
-        <EditText
-            android:layout_width="400dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="5dp"
 
-            />
+
 
 
     </LinearLayout>

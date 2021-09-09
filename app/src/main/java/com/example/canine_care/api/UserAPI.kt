@@ -9,7 +9,7 @@ import retrofit2.http.*
 
 interface UserAPI {
     //register user
-    @POST("auth/register")
+    @POST("/auth/register")
     suspend fun registerUser(
         @Body user : User
     ): Response<LoginResponse>
@@ -23,15 +23,14 @@ interface UserAPI {
     ): Response<LoginResponse>
 
     //Get user details
-    @GET("/me/{id}")
+    @GET("/auth/me")
     suspend fun getMe(
-        @Path("id") id: String,
         @Header("Authorization") token: String,
     ): Response<GetUserProfileResponse>
 
 
     //Update user details
-    @PUT("/update/customer/{id}")
+    @PUT("/auth/update/user/{id}")
     suspend fun updateUser(
         @Path("id") id: String,
         @Body user: User

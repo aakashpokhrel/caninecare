@@ -24,9 +24,9 @@ class UserRepository: MyApiRequest() {
         }
     }
   //Get Profile details
-    suspend fun getMe(id:String): GetUserProfileResponse {
+    suspend fun getMe(): GetUserProfileResponse {
         return apiRequest {
-            UserAPI.getMe(id,ServiceBuilder.token!!)
+            UserAPI.getMe(ServiceBuilder.token!!)
         }
     }
    //Update user profile

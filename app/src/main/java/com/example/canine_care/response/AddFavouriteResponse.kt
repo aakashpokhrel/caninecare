@@ -1,4 +1,10 @@
 package com.example.canine_care.response
 
-class AddFavouriteResponse {
-}
+
+import com.example.canine_care.entity.Favourite
+
+
+data class AddFavouriteResponse (
+    val success: Boolean? = null,
+    val data: Favourite? = null
+)

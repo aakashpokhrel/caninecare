@@ -1,12 +1,15 @@
 package com.example.canine_care.ui
 
+import android.app.Activity
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.core.content.ContentProviderCompat.requireContext
 import com.example.canine_care.R
 import kotlinx.android.synthetic.main.activity_user_dashboard.*
 
@@ -17,10 +20,11 @@ class UserDashboard : AppCompatActivity() {
     private lateinit var imcart: ImageView
     private lateinit var imadopt: ImageView
     private lateinit var immedical: ImageView
-    private lateinit var impayment: ImageView
+    private lateinit var imfavourite: ImageView
     private lateinit var imaboutus: ImageView
     private lateinit var imfeedback: ImageView
     private lateinit var imlogout: ImageView
+
 
     lateinit var toggle: ActionBarDrawerToggle
 
@@ -28,37 +32,40 @@ class UserDashboard : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_dashboard)
-        improfile = findViewById(R.id.improfile)
-        imhome = findViewById(R.id.imhome)
+
         improduct = findViewById(R.id.improduct)
         imcart = findViewById(R.id.imcart)
         imadopt = findViewById(R.id.imadopt)
         immedical = findViewById(R.id.immedical)
-        impayment = findViewById(R.id.impayment)
         imaboutus = findViewById(R.id.imaboutus)
-        imfeedback = findViewById(R.id.imfeedback)
-        imlogout = findViewById(R.id.imlogout)
+        imfavourite = findViewById(R.id.imfavourite)
 
 
 
 
-        improfile.setOnClickListener {
-            val intent = Intent(this@UserDashboard, ProfileActivity::class.java)
-            startActivity(intent)
-        }
 
-        imhome.setOnClickListener {
-//            val intent = Intent(this@UserDashboard, AddProductActivity::class.java)
+//        improfile.setOnClickListener {
+//            val intent = Intent(this@UserDashboard, ProfileActivity::class.java)
 //            startActivity(intent)
-        }
+//        }
+
+//        imhome.setOnClickListener {
+////            val intent = Intent(this@UserDashboard, AddProductActivity::class.java)
+////            startActivity(intent)
+//        }
 
         improduct.setOnClickListener {
             val intent = Intent(this@UserDashboard, ViewProductActivity::class.java)
             startActivity(intent)
         }
-        imcart.setOnClickListener {
-//            val intent = Intent(this@UserDashboard, UpdateProductActivity::class.java)
+
+//        impayment.setOnClickListener {
+//            val intent = Intent(this@UserDashboard, PaymentActivity::class.java)
 //            startActivity(intent)
+//        }
+        imcart.setOnClickListener {
+           val intent = Intent(this@UserDashboard, CartActivity::class.java)
+            startActivity(intent)
         }
         imadopt.setOnClickListener {
             val intent = Intent(this@UserDashboard,ViewPetActivity::class.java)
@@ -76,8 +83,8 @@ class UserDashboard : AppCompatActivity() {
             startActivity(intent)
         }
 
-        imfeedback.setOnClickListener{
-            val intent = Intent(this, FeedbackActivity::class.java)
+        imfavourite.setOnClickListener{
+            val intent = Intent(this, FavouriteActivity::class.java)
             startActivity(intent)
         }
 
@@ -90,7 +97,28 @@ class UserDashboard : AppCompatActivity() {
 
         nav_view.setNavigationItemSelectedListener {
             when(it.itemId){
-                R.id.imhome -> Toast.makeText(applicationContext, "clicked home", Toast.LENGTH_SHORT).show()
+                R.id.profile -> {
+                    startActivity(Intent(this, ProfileActivity::class.java))
+                }
+                R.id.menuAbout->{
+                    startActivity(Intent(this, AboutusActivity::class.java))
+                }
+                R.id.home->{
+                    startActivity(Intent(this, UserDashboard::class.java))
+                }
+                R.id.menuCart->{
+                    startActivity(Intent(this, CartActivity::class.java))
+                }
+                R.id.Menufavourite->{
+                    startActivity(Intent(this, FavouriteActivity::class.java))
+                }
+                R.id.menuFeedback->{
+                    startActivity(Intent(this, FeedbackActivity::class.java))
+                }
+                R.id.menuLogout->{
+                    startActivity(Intent(this, MainActivity::class.java))
+                }
+
             }
             true
         }

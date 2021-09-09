@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/dbg"
     tools:context=".ui.InformationActivity">
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,17 +26,17 @@
                 app:cardCornerRadius="12dp"
                 android:layout_marginLeft="10dp"
                 app:cardElevation="5dp"
-                app:cardBackgroundColor="@color/white"
+                android:layout_marginTop="20sp"
+                app:cardBackgroundColor="#ccccff"
                 android:layout_margin="10dp">
 
 
                 <ImageView
                     android:layout_width="200dp"
                     android:id="@+id/imdiseases"
-                    android:layout_height="90dp"
-                    android:src="@drawable/diseases"
+                    android:layout_height="240dp"
+                    android:src="@drawable/dis"
                     android:layout_marginTop="18dp"
-
                     android:padding="5dp"
                     android:layout_gravity="center"/>
 
@@ -48,6 +49,16 @@
                     android:text="Diseases"
                     android:textSize="25dp"
                     android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="260dp"
+                    android:text="click picture to view"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="100dp"
+                    android:drawableRight="@drawable/next"/>
 
             </androidx.cardview.widget.CardView>
 
@@ -70,15 +81,16 @@
                 app:cardCornerRadius="12dp"
                 android:layout_marginLeft="10dp"
                 app:cardElevation="5dp"
-                app:cardBackgroundColor="@color/white"
+                android:layout_marginTop="0dp"
+                app:cardBackgroundColor="#ccccff"
                 android:layout_margin="10dp">
 
 
                 <ImageView
                     android:layout_width="200dp"
                     android:id="@+id/imvaccines"
-                    android:layout_height="90dp"
-                    android:src="@drawable/information"
+                    android:layout_height="200dp"
+                    android:src="@drawable/vaccine"
                     android:layout_marginTop="18dp"
 
                     android:padding="5dp"
@@ -93,6 +105,16 @@
                     android:text="Vaccines"
                     android:textSize="25dp"
                     android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="260dp"
+                    android:text="click picture to view"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="100dp"
+                    android:drawableRight="@drawable/next"/>
+
 
             </androidx.cardview.widget.CardView>
 

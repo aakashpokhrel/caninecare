@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="260dp"
-    android:background="@drawable/white_circular_border"
+    android:layout_height="315dp"
+    android:background="#e6e6ff"
     android:layout_margin="5dp"
     android:gravity="center"
     android:layout_marginStart="@dimen/small"
     android:orientation="vertical"
     android:padding="15dp"
     android:layout_marginLeft="@dimen/small">
+
+
+
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -19,7 +22,11 @@
             android:id="@+id/stdimage"
             android:layout_width="match_parent"
             android:layout_height="100dp"
+            android:layout_marginTop="10dp"
             android:src="@drawable/noimage" />
+
+
+
 
 
     </RelativeLayout>
@@ -43,18 +50,20 @@
                 android:text="Name:"
                 android:textStyle="bold"
                 android:maxLines="1"
-                android:textColor="@color/textColor"
-                android:textSize="15sp" />
+                android:fontFamily="serif"
+                android:textColor=" #990000"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/tvPetName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="product"
+                android:text="Dog name"
                 android:textStyle="bold"
                 android:maxLines="1"
-                android:textColor="@color/textColor"
-                android:textSize="15sp" />
+                android:fontFamily="serif"
+                android:textColor=" #990000"
+                android:textSize="18sp" />
 
         </LinearLayout>
 
@@ -63,23 +72,25 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <TextView
-                android:layout_width="55dp"
+                android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:text="Age:"
                 android:textStyle="bold"
                 android:maxLines="1"
-                android:textColor="@color/textColor"
-                android:textSize="12sp" />
+                android:textColor="#0000ff"
+                android:fontFamily="serif"
+                android:textSize="15sp" />
 
             <TextView
                 android:id="@+id/tvPetAge"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="product"
+                android:text="dog age"
                 android:textStyle="bold"
                 android:maxLines="1"
-                android:textColor="@color/textColor"
-                android:textSize="12sp" />
+                android:fontFamily="serif"
+                android:textColor="#0000ff"
+                android:textSize="17sp" />
 
         </LinearLayout>
 
@@ -88,13 +99,13 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <TextView
-                android:layout_width="55dp"
+                android:layout_width="45dp"
                 android:layout_height="wrap_content"
                 android:text="Price:"
                 android:textStyle="bold"
                 android:maxLines="1"
-                android:textColor="@color/textColor"
-                android:textSize="12sp" />
+                android:textColor="#145214"
+                android:textSize="15sp" />
 
             <TextView
                 android:id="@+id/tvPetPrice"
@@ -103,8 +114,8 @@
                 android:text="(In Nrs)"
                 android:textStyle="bold"
                 android:maxLines="1"
-                android:textColor="@color/textColor"
-                android:textSize="12sp" />
+                android:textColor="#145214"
+                android:textSize="17sp" />
 
         </LinearLayout>
 
@@ -118,8 +129,9 @@
                 android:text="Pieces:"
                 android:textStyle="bold"
                 android:maxLines="1"
-                android:textColor="@color/textColor"
-                android:textSize="12sp" />
+                android:fontFamily="serif"
+                android:textColor="#666600"
+                android:textSize="15sp" />
 
             <TextView
                 android:id="@+id/tvPetPiece"
@@ -128,8 +140,9 @@
                 android:text="Availablity"
                 android:textStyle="bold"
                 android:maxLines="1"
-                android:textColor="@color/textColor"
-                android:textSize="12sp" />
+                android:fontFamily="serif"
+                android:textColor="#666600"
+                android:textSize="17sp" />
 
         </LinearLayout>
 
@@ -142,19 +155,19 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/small"
+                android:fontFamily="serif"
                 android:text="Description:"
                 android:textStyle="bold"
-                android:textColor="@color/textColor"
-                android:textSize="12sp" />
+                android:textColor=" #4d004d"
+                android:textSize="15sp" />
             <TextView
                 android:id="@+id/tvPetDesc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/small"
-                android:text="Price"
+                android:text="describe about dog"
                 android:textStyle="bold"
-                android:textColor="@color/textColor"
+                android:fontFamily="serif"
+                android:textColor=" #4d004d"
                 android:textSize="12sp" />
         </LinearLayout>
 
@@ -163,19 +176,22 @@
 
 
         <Button
-            android:id="@+id/btnPetAdopt"
+            android:id="@+id/btnFavourite"
             android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#ff7c17"
+            android:layout_height="60dp"
+            android:backgroundTint="#2eb82e"
             android:layout_gravity="center"
-            android:text="Adopt Me"
+            android:text="Add to Favourite"
+            android:fontFamily="serif"
+            android:layout_marginTop="10dp"
+            android:drawableRight="@drawable/like"
             android:textStyle="bold"
-
             />
+
         <EditText
             android:layout_width="400dp"
             android:layout_height="30dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="0dp"
 
             />
 

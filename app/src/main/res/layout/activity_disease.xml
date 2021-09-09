@@ -1,9 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.DiseaseActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bgdashboard"
+        android:orientation="vertical">
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:rowCount="2"
+            android:columnCount="2"
+
+            android:layout_margin="5dp"
+            android:alignmentMode="alignMargins"
+            android:layout_gravity="center_horizontal"
+            android:columnOrderPreserved="false">
+
+            <androidx.cardview.widget.CardView
+
+                android:layout_width="325dp"
+                android:layout_height="310dp"
+                app:cardCornerRadius="1000dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginLeft="40dp"
+                app:cardElevation="5dp"
+                app:cardBackgroundColor="@color/white"
+                android:layout_margin="10dp">
+
+
+                <ImageView
+                    android:layout_width="180dp"
+                    android:id="@+id/imdog"
+                    android:layout_height="240dp"
+                    android:src="@drawable/dog"
+                    android:layout_marginTop="18dp"
+
+                    android:padding="5dp"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="130dp"
+                    android:text="Dog"
+
+                    android:textSize="40dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:text="Click picture to view dog diseses"
+                    android:layout_marginTop="260dp"
+                    android:layout_marginLeft="110dp"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:drawableRight="@drawable/next"/>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+        </GridLayout>
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:rowCount="2"
+            android:columnCount="2"
+            android:layout_margin="5dp"
+            android:alignmentMode="alignMargins"
+            android:layout_gravity="center_horizontal"
+            android:columnOrderPreserved="false">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="325dp"
+                android:layout_height="310dp"
+                app:cardCornerRadius="1000dp"
+
+                android:layout_marginLeft="40dp"
+                android:layout_marginBottom="0dp"
+                app:cardElevation="5dp"
+                app:cardBackgroundColor="@color/white"
+                android:layout_margin="10dp">
+
+
+                <ImageView
+                    android:layout_width="180dp"
+                    android:id="@+id/imcat"
+                    android:layout_height="220dp"
+                    android:src="@drawable/cat"
+                    android:layout_marginTop="18dp"
+
+                    android:padding="5dp"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="130dp"
+                    android:text="Cat"
+                    android:textSize="40dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:text="Click picture to view dog diseses"
+                    android:layout_marginTop="260dp"
+                    android:layout_marginLeft="110dp"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:drawableRight="@drawable/next"/>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+        </GridLayout>
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

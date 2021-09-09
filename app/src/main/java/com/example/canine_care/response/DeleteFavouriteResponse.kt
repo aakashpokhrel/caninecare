@@ -1,4 +1,5 @@
 package com.example.canine_care.response
 
-class deleteFavouriteItem {
-}
+data class DeleteFavouriteResponse(
+    val success: Boolean? = null,
+)

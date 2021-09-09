@@ -1,6 +1,169 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="310dp"
+    android:background="@drawable/white_circular_border"
+    android:backgroundTint="#ff704d"
+    android:layout_margin="5dp"
+    android:gravity="center"
+    android:layout_marginStart="@dimen/small"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:layout_marginLeft="@dimen/small">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <ImageView
+            android:id="@+id/productimage"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:src="@drawable/noimage"
+            />
+
+
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/small"
+        android:paddingRight="@dimen/small">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="Name:"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:fontFamily="sans-serif-black"
+                android:textColor="#cc3300"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/productname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="product"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:fontFamily="serif"
+                android:maxLines="1"
+                android:textColor="#cc3300"
+                android:textSize="23sp" />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text="Description:"
+                android:textStyle="bold"
+                android:textColor="#002966"
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/productdesc"
+                android:layout_width="wrap_content"
+                android:layout_height="43dp"
+                android:text="Desc"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="serif"
+                android:textColor="#002966"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="Price:Rs"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-black"
+                android:textStyle="bold"
+                android:textColor="#ff0000"
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/productprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(in Rs.)"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:fontFamily="serif"
+                android:textColor="#ff0000"
+                android:textSize="30sp" />
+
+        </LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <Button
+        android:id="@+id/btnbuy"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#0066ff"
+        android:text="Buy"
+        android:layout_marginLeft="0dp"
+        android:fontFamily="serif"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:drawableLeft="@drawable/buycart"
+        android:drawableRight="@drawable/card"
+
+        />
+
+    <Button
+        android:id="@+id/productdelete"
+        android:layout_width="140dp"
+        android:layout_marginTop="8dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#0066ff"
+        android:text="Delete"
+        android:fontFamily="serif"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:drawableRight="@drawable/remove"
+        android:layout_marginLeft="40dp"/>
+
+</LinearLayout>
+
+
+
+
+        <EditText
+            android:layout_width="400dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+
+            />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

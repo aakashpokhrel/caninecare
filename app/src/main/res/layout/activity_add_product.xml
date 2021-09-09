@@ -40,6 +40,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
+                android:inputType="text"
                 android:layout_marginRight="20dp"
                 android:background="@color/white"
                 android:hint="Product Name" />
@@ -53,7 +54,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etAddDesc"
                 android:layout_width="match_parent"
-
+                android:inputType="text"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
@@ -76,7 +77,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
-
                 android:layout_marginRight="20dp"
                 android:background="@color/white"
                 android:hint="Price"

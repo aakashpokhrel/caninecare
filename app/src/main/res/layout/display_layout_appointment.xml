@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    android:layout_width="250dp"
     android:layout_height="260dp"
     android:background="@drawable/white_circular_border"
     android:layout_margin="5dp"
-    android:gravity="center"
     android:layout_marginStart="@dimen/small"
     android:orientation="vertical"
     android:padding="15dp"
@@ -14,17 +13,15 @@
         android:layout_width="1dp"
         android:layout_height="1dp"
         >
-
-        <ImageView
-            android:id="@+id/stdimage"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:src="@drawable/noimage" />
-
-
     </RelativeLayout>
 
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Booking Details:"
+        android:textSize="18dp"
+        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -34,27 +31,30 @@
         android:paddingRight="@dimen/small">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
             android:orientation="horizontal">
+
             <TextView
-                android:layout_width="55dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Fullname:"
-                android:textStyle="bold"
                 android:maxLines="1"
+                android:text="Fullname:"
                 android:textColor="@color/textColor"
-                android:textSize="15sp" />
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tvfullname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Fullname"
-                android:textStyle="bold"
+                android:layout_marginLeft="10dp"
                 android:maxLines="1"
+                android:text="Fullname"
                 android:textColor="@color/textColor"
-                android:textSize="15sp" />
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -62,14 +62,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <TextView
-                android:layout_width="55dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Mobile No:"
-                android:textStyle="bold"
                 android:maxLines="1"
+                android:text="Mobile No:"
                 android:textColor="@color/textColor"
-                android:textSize="12sp" />
+                android:textSize="18sp"
+                android:layout_marginTop="@dimen/small"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tvmnumber"
@@ -78,8 +80,9 @@
                 android:text="Your number"
                 android:textStyle="bold"
                 android:maxLines="1"
+                android:layout_marginTop="@dimen/small"
                 android:textColor="@color/textColor"
-                android:textSize="12sp" />
+                android:textSize="16sp" />
 
         </LinearLayout>
 
@@ -93,8 +96,9 @@
                 android:text="Email:"
                 android:textStyle="bold"
                 android:maxLines="1"
+                android:layout_marginTop="@dimen/small"
                 android:textColor="@color/textColor"
-                android:textSize="12sp" />
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/tvemail"
@@ -103,8 +107,9 @@
                 android:text="Your Email"
                 android:textStyle="bold"
                 android:maxLines="1"
+                android:layout_marginTop="@dimen/small"
                 android:textColor="@color/textColor"
-                android:textSize="12sp" />
+                android:textSize="16sp" />
 
         </LinearLayout>
 
@@ -118,8 +123,9 @@
                 android:text="Date:"
                 android:textStyle="bold"
                 android:maxLines="1"
+                android:layout_marginTop="@dimen/small"
                 android:textColor="@color/textColor"
-                android:textSize="12sp" />
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/tvapdate"
@@ -128,8 +134,9 @@
                 android:text="Enter Date"
                 android:textStyle="bold"
                 android:maxLines="1"
+                android:layout_marginTop="@dimen/small"
                 android:textColor="@color/textColor"
-                android:textSize="12sp" />
+                android:textSize="15sp" />
 
         </LinearLayout>
 
@@ -146,38 +153,23 @@
                 android:text="Address:"
                 android:textStyle="bold"
                 android:textColor="@color/textColor"
-                android:textSize="12sp" />
+                android:textSize="18sp" />
             <TextView
                 android:id="@+id/tvapaddress"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/small"
-                android:text="Price"
+                android:text="Address"
                 android:textStyle="bold"
                 android:textColor="@color/textColor"
-                android:textSize="12sp" />
+                android:textSize="15sp" />
         </LinearLayout>
 
 
 
 
 
-        <Button
-            android:id="@+id/btnbook"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#ff7c17"
-            android:layout_gravity="center"
-            android:text="Book"
-            android:textStyle="bold"
 
-            />
-        <EditText
-            android:layout_width="400dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="5dp"
-
-            />
 
 
     </LinearLayout>

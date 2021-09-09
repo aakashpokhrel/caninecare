@@ -4,6 +4,5 @@ import com.example.canine_care.entity.User
 
 class GetUserProfileResponse (
    val success: Boolean? = null,
-   val data: User? = null,
-   val id:String? = null
+   val data: User? = null
 )

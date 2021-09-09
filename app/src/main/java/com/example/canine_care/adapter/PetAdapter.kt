@@ -5,6 +5,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
@@ -12,7 +13,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.canine_care.R
 import com.example.canine_care.api.ServiceBuilder
+import com.example.canine_care.entity.Cart
+import com.example.canine_care.entity.Favourite
 import com.example.canine_care.entity.Pet
+import com.example.canine_care.repository.CartRepo
+import com.example.canine_care.repository.FavouriteRepo
 import com.example.canine_care.repository.PetRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -30,6 +35,7 @@ class PetAdapter (
         val tvPetDesc : TextView
         val tvPetPrice : TextView
         val image : ImageView
+        val btnFavourite: Button
         val delete : ImageView
         val update : ImageView
         init {
@@ -38,6 +44,7 @@ class PetAdapter (
             tvPetPiece= view.findViewById(R.id.tvPetPiece)
             tvPetDesc= view.findViewById(R.id.tvPetDesc)
             tvPetPrice= view.findViewById(R.id.tvPetPrice)
+            btnFavourite = view.findViewById(R.id.btnFavourite)
             image = view.findViewById(R.id.stdimage)
             delete = view.findViewById(R.id.delete)
             update = view.findViewById(R.id.update)
@@ -67,53 +74,94 @@ class PetAdapter (
                 .fitCenter()
                 .into(holder.image)
         }
+        holder.btnFavourite.setOnClickListener {
+            val name = prdlst.petname
+            val age = prdlst.petage
+            val piece = prdlst.petpiece
+            val price = prdlst.petprice
+            val desc = prdlst.petdesc
+            val pic = prdlst.photo
+
+            val favourites = Favourite(
+                petname = name,
+                petage = age,
+                petpiece = piece,
+                petprice = price,
+                petdesc = desc,
+                photo = pic
+            )
+            CoroutineScope(Dispatchers.IO).launch {
+                try {
+                    val favouriteRepo = FavouriteRepo()
+                    val response = favouriteRepo.addItemToFavourite(favourites)
+                    if (response.success == true) {
+
+                        withContext(Dispatchers.Main) {
+                            Toast.makeText(
+                                context,
+                                "$name Added to Cart", Toast.LENGTH_SHORT
+                            ).show()
+                        }
+                    }
+                } catch (ex: Exception) {
+                    withContext(Dispatchers.Main) {
+                        Toast.makeText(
+                            context,
+                            ex.toString(), Toast.LENGTH_LONG
+                        ).show()
+                    }
+                }
+            }
+        }
+
 //        holder.update.setOnClickListener{
 //            val intent = Intent(context, UpdateProductActivity::class.java)
 //            intent.putExtra("product", prdlst)
 //            context.startActivity(intent)
 //        }
-        holder.delete.setOnClickListener{
-            val builder = AlertDialog.Builder(context)
-            builder.setTitle("Delete pet")
-            builder.setMessage("Are you sure you want to delete ${prdlst.petname} ??")
-            builder.setIcon(android.R.drawable.ic_delete)
+                holder.delete.setOnClickListener {
+                    val builder = AlertDialog.Builder(context)
+                    builder.setTitle("Delete pet")
+                    builder.setMessage("Are you sure you want to delete ${prdlst.petname} ??")
+                    builder.setIcon(android.R.drawable.ic_delete)
 
-            builder.setPositiveButton("Yes") { _, _ ->
-                CoroutineScope(Dispatchers.IO).launch {
-                    try {
-                        val petRepository = PetRepository()
-                        val response = petRepository.deletePet(prdlst._id!!)
-                        if (response.success == true) {
-                            withContext(Dispatchers.Main) {
-                                Toast.makeText(
-                                    context,
-                                    "Pet Deleted",
-                                    Toast.LENGTH_SHORT
-                                ).show()
+                    builder.setPositiveButton("Yes") { _, _ ->
+                        CoroutineScope(Dispatchers.IO).launch {
+                            try {
+                                val petRepository = PetRepository()
+                                val response = petRepository.deletePet(prdlst._id!!)
+                                if (response.success == true) {
+                                    withContext(Dispatchers.Main) {
+                                        Toast.makeText(
+                                            context,
+                                            "Pet Deleted",
+                                            Toast.LENGTH_SHORT
+                                        ).show()
+                                    }
+                                    withContext(Dispatchers.Main) {
+                                        listPet.remove(prdlst)
+                                        notifyDataSetChanged()
+                                    }
+                                }
+                            } catch (ex: Exception) {
+                                withContext(Dispatchers.Main) {
+                                    Toast.makeText(
+                                        context,
+                                        ex.toString(),
+                                        Toast.LENGTH_SHORT
+                                    ).show()
+                                }
                             }
-                            withContext(Dispatchers.Main) {
-                                listPet.remove(prdlst)
-                                notifyDataSetChanged()
-                            }
-                        }
-                    } catch (ex: Exception) {
-                        withContext(Dispatchers.Main) {
-                            Toast.makeText(
-                                context,
-                                ex.toString(),
-                                Toast.LENGTH_SHORT
-                            ).show()
                         }
                     }
+                    builder.setNegativeButton("No") { _, _ ->
+                    }
+                    val alertDialog: AlertDialog = builder.create()
+                    alertDialog.setCancelable(false)
+                    alertDialog.show()
                 }
             }
-            builder.setNegativeButton("No") { _, _ ->
-            }
-            val alertDialog: AlertDialog = builder.create()
-            alertDialog.setCancelable(false)
-            alertDialog.show()
-        }
-    }
+
 
     override fun getItemCount(): Int {
         return listPet.size

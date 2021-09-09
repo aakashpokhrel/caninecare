@@ -23,6 +23,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Canine_Care"
         android:usesCleartextTraffic="true">
+        <activity android:name=".ui.FavouriteActivity"></activity>
+        <activity android:name=".ui.PaymentActivity" />
+        <activity android:name=".ui.CartActivity" />
+        <activity android:name=".ui.VaccineActivity" />
+        <activity android:name=".ui.catdiseaseActivity" />
+        <activity android:name=".ui.DogdiseasesActivity" />
+        <activity android:name=".ui.DiseaseActivity" />
         <activity
             android:name=".ui.ViewAppointmentActivity"
             android:exported="true" />

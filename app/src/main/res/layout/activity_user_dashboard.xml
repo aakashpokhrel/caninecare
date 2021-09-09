@@ -7,15 +7,15 @@
     android:layout_height="match_parent"
     tools:context=".ui.UserDashboard"
     android:id="@+id/drawyerLayout"
+    android:background="@drawable/bgdashboard"
     >
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+
+<ScrollView
     android:layout_width="match_parent"
-    android:background="@drawable/bg12"
     android:layout_height="match_parent"
     tools:context=".ui.UserDashboard">
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,6 +23,54 @@
         android:orientation="vertical">
 
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:maxLines="2"
+                android:text="Canine Care"
+                android:textSize="30dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:fontFamily="serif"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="70dp"
+                android:src="@drawable/dashlogo" />
+
+
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:textSize="15sp"
+                android:textColor="#fff"
+                android:text="where pet becomes family"
+                android:fontFamily="serif"/>
+        </LinearLayout>
+
+
+
+
+
         <GridLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -34,90 +82,8 @@
             android:columnOrderPreserved="false">
 
             <androidx.cardview.widget.CardView
-                android:layout_width="120dp"
-                android:layout_height="140dp"
-                app:cardCornerRadius="12dp"
-                android:layout_marginLeft="40dp"
-                app:cardElevation="5dp"
-                app:cardBackgroundColor="@color/white"
-                android:layout_margin="10dp">
-
-
-                <ImageView
-                    android:layout_width="200dp"
-                    android:id="@+id/improfile"
-                    android:layout_height="90dp"
-                    android:src="@drawable/profile"
-                    android:layout_marginTop="18dp"
-
-                    android:padding="5dp"
-                    android:layout_gravity="center"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="25dp"
-                    android:text="Profile"
-                    android:textSize="25dp"
-                    android:textColor="@color/black"/>
-
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
-                android:layout_width="120dp"
-                android:layout_height="140dp"
-                app:cardCornerRadius="12dp"
-                android:layout_marginLeft="55dp"
-                app:cardElevation="5dp"
-                app:cardBackgroundColor="@color/white"
-                android:layout_margin="10dp">
-
-
-                <ImageView
-                    android:layout_width="200dp"
-                    android:id="@+id/imhome"
-                    android:layout_height="90dp"
-                    android:src="@drawable/home"
-                    android:layout_marginTop="18dp"
-
-                    android:padding="5dp"
-                    android:layout_gravity="center"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="25dp"
-                    android:text="Home"
-                    android:textSize="25dp"
-                    android:textColor="@color/black"/>
-
-            </androidx.cardview.widget.CardView>
-
-
-
-
-
-
-
-
-
-        </GridLayout>
-        <GridLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:rowCount="2"
-            android:columnCount="2"
-            android:layout_margin="5dp"
-            android:alignmentMode="alignMargins"
-            android:layout_gravity="center_horizontal"
-            android:columnOrderPreserved="false">
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="120dp"
-                android:layout_height="140dp"
+                android:layout_width="130dp"
+                android:layout_height="150dp"
                 app:cardCornerRadius="12dp"
                 android:layout_marginLeft="40dp"
                 app:cardElevation="5dp"
@@ -147,8 +113,8 @@
 
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
-                android:layout_width="120dp"
-                android:layout_height="140dp"
+                android:layout_width="130dp"
+                android:layout_height="150dp"
                 app:cardCornerRadius="12dp"
                 android:layout_marginLeft="55dp"
                 app:cardElevation="5dp"
@@ -198,9 +164,10 @@
             android:columnOrderPreserved="false">
 
             <androidx.cardview.widget.CardView
-                android:layout_width="120dp"
-                android:layout_height="140dp"
+                android:layout_width="130dp"
+                android:layout_height="150dp"
                 app:cardCornerRadius="12dp"
+                android:layout_marginTop="15dp"
                 android:layout_marginLeft="40dp"
                 app:cardElevation="5dp"
                 app:cardBackgroundColor="@color/white"
@@ -229,11 +196,54 @@
 
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
-                android:layout_width="120dp"
-                android:layout_height="140dp"
+                android:layout_width="140dp"
+                android:layout_height="150dp"
                 app:cardCornerRadius="12dp"
                 android:layout_marginLeft="55dp"
                 app:cardElevation="5dp"
+                android:layout_marginTop="15dp"
+                app:cardBackgroundColor="@color/white"
+                android:layout_margin="10dp">
+
+
+                <ImageView
+                    android:id="@+id/imfavourite"
+                    android:layout_width="205dp"
+                    android:layout_height="90dp"
+                    android:layout_marginTop="18dp"
+                    android:src="@drawable/favourites"
+                    android:padding="5dp"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:text="Favourites"
+                    android:textSize="25dp"
+                    android:textColor="@color/black"/>
+
+            </androidx.cardview.widget.CardView>
+        </GridLayout>
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:rowCount="2"
+            android:columnCount="2"
+            android:layout_margin="5dp"
+            android:alignmentMode="alignMargins"
+            android:layout_gravity="center_horizontal"
+            android:columnOrderPreserved="false">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="130dp"
+                android:layout_height="150dp"
+                app:cardCornerRadius="12dp"
+                android:layout_marginLeft="40dp"
+                app:cardElevation="5dp"
+                android:layout_marginTop="15dp"
                 app:cardBackgroundColor="@color/white"
                 android:layout_margin="10dp">
 
@@ -259,54 +269,13 @@
                     android:textColor="@color/black"/>
 
             </androidx.cardview.widget.CardView>
-        </GridLayout>
-        <GridLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:rowCount="2"
-            android:columnCount="2"
-            android:layout_margin="5dp"
-            android:alignmentMode="alignMargins"
-            android:layout_gravity="center_horizontal"
-            android:columnOrderPreserved="false">
-
             <androidx.cardview.widget.CardView
-                android:layout_width="120dp"
-                android:layout_height="140dp"
-                app:cardCornerRadius="12dp"
-                android:layout_marginLeft="40dp"
-                app:cardElevation="5dp"
-                app:cardBackgroundColor="@color/white"
-                android:layout_margin="10dp">
-
-
-                <ImageView
-                    android:layout_width="200dp"
-                    android:id="@+id/impayment"
-                    android:layout_height="90dp"
-                    android:src="@drawable/payment"
-                    android:layout_marginTop="18dp"
-
-                    android:padding="5dp"
-                    android:layout_gravity="center"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="15dp"
-                    android:text="Payment"
-                    android:textSize="25dp"
-                    android:textColor="@color/black"/>
-
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
-                android:layout_width="120dp"
-                android:layout_height="140dp"
+                android:layout_width="130dp"
+                android:layout_height="150dp"
                 app:cardCornerRadius="12dp"
                 android:layout_marginLeft="55dp"
                 app:cardElevation="5dp"
+                android:layout_marginTop="15dp"
                 app:cardBackgroundColor="@color/white"
                 android:layout_margin="10dp">
 
@@ -342,80 +311,8 @@
 
 
         </GridLayout>
-        <GridLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:rowCount="2"
-            android:columnCount="2"
-            android:layout_margin="5dp"
-            android:alignmentMode="alignMargins"
-            android:layout_gravity="center_horizontal"
-            android:columnOrderPreserved="false">
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="120dp"
-                android:layout_height="140dp"
-                app:cardCornerRadius="12dp"
-                android:layout_marginLeft="40dp"
-                app:cardElevation="5dp"
-                app:cardBackgroundColor="@color/white"
-                android:layout_margin="10dp">
 
 
-                <ImageView
-                    android:id="@+id/imfeedback"
-                    android:layout_width="200dp"
-                    android:layout_height="78dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="18dp"
-
-                    android:padding="5dp"
-                    android:src="@drawable/feedback" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="5dp"
-                    android:text="Feedback"
-                    android:textSize="25dp"
-                    android:textColor="@color/black"/>
-
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
-                android:layout_width="120dp"
-                android:layout_height="140dp"
-                app:cardCornerRadius="12dp"
-                android:layout_marginLeft="55dp"
-                app:cardElevation="5dp"
-                app:cardBackgroundColor="@color/white"
-                android:layout_margin="10dp">
-
-
-                <ImageView
-                    android:layout_width="200dp"
-                    android:id="@+id/imlogout"
-                    android:layout_height="90dp"
-                    android:src="@drawable/log"
-                    android:layout_marginTop="18dp"
-
-                    android:padding="5dp"
-                    android:layout_gravity="center"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="25dp"
-                    android:text="Logout"
-                    android:textSize="25dp"
-                    android:textColor="@color/black"/>
-
-            </androidx.cardview.widget.CardView>
-
-        </GridLayout>
 
     </LinearLayout>
 

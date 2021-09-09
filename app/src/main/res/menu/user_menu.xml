@@ -21,7 +21,7 @@
             #FFFF
         </item>
 
-        <item android:id="@+id/favourite"
+        <item android:id="@+id/Menufavourite"
             android:icon="@drawable/ic_baseline_star_24"
             android:title="Favourite"
             android:name="android:itemBackground">
@@ -29,18 +29,13 @@
         </item>
 
 
-        <item android:id="@+id/cart"
+        <item android:id="@+id/menuCart"
             android:icon="@drawable/ic_baseline_shopping_cart_24"
             android:title="Cart"
             android:name="android:itemBackground">
             #FFFF
         </item>
-        <item android:id="@+id/orders"
-            android:icon="@drawable/ic_baseline_arrow_downward_24"
-            android:title="Order"
-            android:name="android:itemBackground">
-            #FFFF
-        </item>
+
 
     </group>
 
@@ -57,15 +52,15 @@
             </item>
 
 
-            <item android:id="@+id/menuMessage"
+            <item android:id="@+id/menuFeedback"
                 android:icon="@drawable/ic_baseline_email_24"
-                android:title="Message"
+                android:title="Feedbacks"
                 android:name="android:itemBackground">
                 #FFFF
             </item>
 
 
-            <item android:id="@+id/Logout"
+            <item android:id="@+id/menuLogout"
                 android:icon="@drawable/ic_baseline_exit_to_app_24"
                 android:title="Logout"
                 android:name="android:itemBackground">

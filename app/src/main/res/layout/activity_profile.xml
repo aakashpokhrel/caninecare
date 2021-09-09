@@ -24,6 +24,42 @@
         android:src="@drawable/profileimg"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="125dp"/>
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@drawable/user"
+        android:drawableTint="#4d79ff"
+        android:text="First Name"
+        android:textColor=" #0066cc"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        />
+
+    <EditText
+        android:id="@+id/Profilefirstname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"/>
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@drawable/user"
+        android:drawableTint="#4d79ff"
+        android:text="Last Name"
+        android:textColor=" #0066cc"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        />
+
+    <EditText
+        android:id="@+id/ProfileLastname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"/>
 
     <TextView
 
@@ -38,11 +74,13 @@
         android:textStyle="bold"
         />
 
+
     <EditText
         android:id="@+id/Profilename"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"/>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -61,23 +99,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:drawableLeft="@drawable/key"
-        android:drawableTint="#4d79ff"
-        android:textColor=" #0066cc"
-        android:text="Password"
-        android:textSize="18dp"
-        android:textStyle="bold"
-        />
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/Profilepassword"
-        android:layout_marginTop="0dp"/>
 <!--    <TextView-->
 <!--        android:layout_width="match_parent"-->
 <!--        android:layout_height="wrap_content"-->
