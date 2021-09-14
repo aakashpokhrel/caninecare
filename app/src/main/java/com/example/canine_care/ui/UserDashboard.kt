@@ -100,8 +100,8 @@ class UserDashboard : AppCompatActivity() {
                 R.id.profile -> {
                     startActivity(Intent(this, ProfileActivity::class.java))
                 }
-                R.id.menuAbout->{
-                    startActivity(Intent(this, AboutusActivity::class.java))
+                R.id.menuTheme->{
+                    startActivity(Intent(this, ThemeActivity::class.java))
                 }
                 R.id.home->{
                     startActivity(Intent(this, UserDashboard::class.java))
@@ -115,7 +115,14 @@ class UserDashboard : AppCompatActivity() {
                 R.id.menuFeedback->{
                     startActivity(Intent(this, FeedbackActivity::class.java))
                 }
+                R.id.menuLocation->{
+                    startActivity(Intent(this, MapsActivity::class.java))
+                }
                 R.id.menuLogout->{
+                    val sharedPref = getSharedPreferences("MY_PREFERENCES", Activity.MODE_PRIVATE)
+                    val editor: SharedPreferences.Editor = sharedPref.edit()
+                    editor.clear()
+                    editor.apply()
                     startActivity(Intent(this, MainActivity::class.java))
                 }
 

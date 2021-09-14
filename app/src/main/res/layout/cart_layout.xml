@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="310dp"
+    android:layout_height="260dp"
     android:background="@drawable/white_circular_border"
     android:backgroundTint="#ff704d"
     android:layout_margin="5dp"
@@ -11,20 +11,6 @@
     android:padding="15dp"
     android:layout_marginLeft="@dimen/small">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
-
-        <ImageView
-            android:id="@+id/productimage"
-            android:layout_width="match_parent"
-            android:layout_height="85dp"
-            android:src="@drawable/noimage"
-            />
-
-
-    </RelativeLayout>
 
 
 
@@ -155,12 +141,7 @@
 
 
 
-        <EditText
-            android:layout_width="400dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="5dp"
 
-            />
 
 
     </LinearLayout>

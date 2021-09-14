@@ -25,7 +25,6 @@ class CartAdapter(private val listProduct: ArrayList<Cart>, val context: Context
     class CartViewHolder(view: View) : RecyclerView.ViewHolder(view){
         val productname: TextView = view.findViewById(R.id.productname)
         val productdesc: TextView = view.findViewById(R.id.productdesc)
-        val productimage: ImageView = view.findViewById(R.id.productimage)
         val productprice: TextView = view.findViewById(R.id.productprice)
         val productdelete: Button = view.findViewById(R.id.productdelete)
         val btnbuy: Button = view.findViewById(R.id.btnbuy)
@@ -43,10 +42,10 @@ class CartAdapter(private val listProduct: ArrayList<Cart>, val context: Context
         holder.productdesc.text = cart.desc
         holder.productprice.text = cart.price.toString()
 
-        Glide.with(context)
-            .load(cart.photo)
-            .fitCenter()
-            .into(holder.productimage)
+//        Glide.with(context)
+//            .load(cart.photo)
+//            .fitCenter()
+//            .into(holder.productimage)
         holder.productdelete.setOnClickListener {
             val builder = AlertDialog.Builder(context)
             builder.setTitle("Delete student")

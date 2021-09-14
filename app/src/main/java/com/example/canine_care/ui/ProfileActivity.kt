@@ -30,12 +30,12 @@ class ProfileActivity : AppCompatActivity() {
         lastname = findViewById(R.id.ProfileLastname)
         name = findViewById(R.id.Profilename)
         email = findViewById(R.id.Profileemail)
-
         profileupdate = findViewById(R.id.btnprofileupdate)
         loadUserDetails()
-        btnprofileupdate.setOnClickListener {
+        profileupdate.setOnClickListener {
             updateprofile()
         }
+
 
     }
 

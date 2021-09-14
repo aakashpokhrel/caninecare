@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.canine_care">
+
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -23,7 +24,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Canine_Care"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.FavouriteActivity"></activity>
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".ui.HospitalLocationActivity"
+            android:label="@string/title_activity_hospital_location"></activity>
+        <activity
+            android:name=".ui.LocationActivity"
+            android:label="@string/title_activity_location" />
+        <activity android:name=".ui.FavouriteActivity" />
         <activity android:name=".ui.PaymentActivity" />
         <activity android:name=".ui.CartActivity" />
         <activity android:name=".ui.VaccineActivity" />
@@ -61,17 +81,7 @@
         <activity
             android:name=".ui.AdminActivity"
             android:exported="true" />
-        <!--
-             The API key for Google Maps-based APIs is defined as a string resource.
-             (See the file "res/values/google_maps_api.xml").
-             Note that the API key is linked to the encryption key used to sign the APK.
-             You need a different API key for each encryption key, including the release key that is used to
-             sign the APK for publishing.
-             You can define the keys for the debug and release targets in src/debug/ and src/release/.
-        -->
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

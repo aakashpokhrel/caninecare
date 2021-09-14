@@ -28,7 +28,7 @@ class MedicalActivity : AppCompatActivity() {
         }
 
         imlocation.setOnClickListener {
-            val intent = Intent(this@MedicalActivity, MapsActivity::class.java)
+            val intent = Intent(this@MedicalActivity, HospitalLocationActivity::class.java)
             startActivity(intent)
         }
     }

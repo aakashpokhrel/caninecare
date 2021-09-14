@@ -33,9 +33,9 @@ class FavouriteAdapter(private val listPet: ArrayList<Favourite>, val context: C
         val price:TextView = view.findViewById(R.id.PetPrice)
         val piece: TextView = view.findViewById(R.id.PetPiece)
         val desc: TextView = view.findViewById(R.id.PetDesc)
-        val image: ImageView = view.findViewById(R.id.petimage)
+//        val image: ImageView = view.findViewById(R.id.petimage)
         val petbuy: Button = view.findViewById(R.id.PetBuy)
-        val petdelete: ImageView = view.findViewById(R.id.petdelete)
+        val petdelete: Button = view.findViewById(R.id.petdelete)
 
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FavouriteViewHolder {
@@ -54,10 +54,7 @@ class FavouriteAdapter(private val listPet: ArrayList<Favourite>, val context: C
 
 
 
-        Glide.with(context)
-            .load(favourite.photo)
-            .fitCenter()
-            .into(holder.image)
+
         holder.petdelete.setOnClickListener {
             val builder = AlertDialog.Builder(context)
             builder.setTitle("Delete student")
